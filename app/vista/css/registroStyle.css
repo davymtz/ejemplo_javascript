@@ -1,0 +1,9 @@
+form div .form-control, .row div .btn{
+	margin: 15px 1px;
+	transition: 1s;
+}
+.row div .btn:hover{
+	background: #dcdcdc;
+	color: black;
+	transition: 1s;
+}

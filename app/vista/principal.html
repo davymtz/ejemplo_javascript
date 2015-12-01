@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inventario labmetropolitano</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="app/vista/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="app/vista/css/bootstrap.css" />
+    <link rel="stylesheet" href="app/vista/css/design.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<figure>
+				<!--img src="app/vista/image/metropolitano.jpg" alt="imagen metrolab" /-->
+			</figure>
+		</div>
+		<div class="row">
+			<a href="ingresar" class="btn btn-info navbar-btn">Registrar articulo</a>
+		</div>
+		<div class="row">
+			<h2>Ingrese los datos a consultar</h2>
+			<form action="" class="panel" >
+				<div>
+					<input data-input="inputname" type="text" class="control" placeholder="Codigo inventario">
+					<p class="error text-danger"></p>
+					<input data-input="btnBuscar" type="submit" class="btn" value="Buscar">
+				</div>
+			</form>
+		</div>
+		<div class="row">
+			<div class="panel panel-primary filterable">
+				<div class="panel-heading">
+					<h3 class="panel-title text-center">Consulta de registros</h3>
+				</div>
+				<table class="table table-condensed table-stripped">
+					<thead>
+						<tr class="filters">
+							<td>Descripción</td>
+							<td>Marca / Modelo</td>
+							<td>Codigo inventario</td>
+							<td>Cantidad</td>
+							<td>Categoria</td>
+							<td>Precio</td>
+						</tr>
+					</thead>
+					<tbody>
+						<div class="row" id="idmensaje">
+							<h4>No se encontró ningún resultado, intente con otro nombre o verifique si no hay error de escritura</h4>
+						</div>
+						<tr>
+							<td data-descripcion></td>
+							<td data-marca></td>
+							<td data-codigo></td>
+							<td data-cantidad></td>
+							<td data-categoria></td>
+							<td data-precio></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="loader"><h4>Los datos cargarán en esta tabla</h4></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="app/vista/js/jquery.js"></script>
+	<script type="text/javascript" src="app/vista/js/ajaxBuscar.js"></script>
+</body>
+</html>

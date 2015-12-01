@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ingresar articulo a inventario</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="app/vista/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="app/vista/css/bootstrap.css" />
+    <link rel="stylesheet" href="app/vista/css/registroStyle.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<figure>
+				<!--img src="app/vista/image/metropolitano.jpg" alt="imagen metro"-->
+			</figure>
+		</div>
+		<div class="row">
+			<a href="consultar" class="btn btn-info navbar-btn">Ir a consulta</a>
+		</div>
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="text-center">Ingrese los datos del articulo</h3>
+				</div>
+				<form action="">
+					<div class="col-md-12">
+						<input type="text" name="descripcion" data-input="descripcion" class="form-control" placeholder="Descripción" autofocus />
+					</div>
+					<div class="col-md-6">
+						<input type="text" name="marca" data-input="marca" class="form-control" placeholder="Marca / Modelo" />
+					</div>
+					<div class="col-md-6">
+						<input type="text" name="codigo" data-input="codinventario" class="form-control" placeholder="Codigo de inventario" />
+					</div>
+					<div class="col-md-4">
+						<input type="text" name="categoria" data-input="categoria" class="form-control" placeholder="Categoría" />
+					</div>
+					<div class="col-md-4">
+						<input type="number" name="cantidad" data-input="cantidad" class="form-control" placeholder="Cantidad" />
+					</div>
+					<div class="col-md-4">
+						<input type="text" name="precio" data-input="precio" class="form-control" placeholder="Precio" />
+					</div>
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<input type="submit" name="btnRegistrar" id="btnRegistrar" class="btn" value="Registrar Producto" />
+						</div>
+						<div class="col-md-6 text-center">
+							<input type="reset" id="btnLimpiar" class="btn" value="Limpiar" />
+						</div>
+					</div>
+					<div class="row text-danger text-center">
+						<h3><p class="error"></p></h3>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="app/vista/js/jquery.js"></script>
+	<script type="text/javascript" src="app/vista/js/ajaxRegistro.js"></script>
+</body>
+</html>
