@@ -1,3 +1,4 @@
+//Clousure
 (function (){
 	$("#idmensaje").hide();
 
@@ -35,41 +36,32 @@
 	};
 
 	function buscar(){
-		$.getJSON("app/modelo/buscarRegistro.php?contenido="+$(inputbuscar).val(), mostrarDatos);
-	}
-
-	function mostrarDatos(datos_json){
-		//console.log(datos_json);
-		consulta.idarticulo = datos_json.idarticulo;
-		consulta.descripcion = datos_json.descripcion;
-		consulta.marcamodelo = datos_json.marcamodelo;
-		consulta.codigoinventario = datos_json.codigoinventario;
-		consulta.cantidad = datos_json.cantidad;
-		consulta.categoria = datos_json.categoria;
-		consulta.precio = datos_json.precio;
-
-		renderTemplate(consulta);
+		$.getJSON("app/modelo/buscarRegistro.php?contenido="+$(inputbuscar).val(), renderTemplate);
 	}
 
 	function renderTemplate(consulta){
-		console.log(consulta);
-		if (consulta.idarticulo != undefined){
-			$("[data-descripcion]").html(consulta.descripcion);
-			$("[data-marca]").html(consulta.marcamodelo);
-			$("[data-codigo]").html(consulta.codigoinventario);
-			$("[data-cantidad]").html(consulta.cantidad);
-			$("[data-categoria]").html(consulta.categoria);
-			$("[data-precio]").html(consulta.precio);
-			//$("[data-button='vistaPrevia']").show()
-			//$("[data-button='vistaImprimir']").show();
+		if (consulta.length>0){
+			for(i=0;i<consulta.length;i++){
+				$("tbody").append("<tr class=\"fila\" id=\"template__content-"+i+"\"></tr>");
+				$("#template__content-"+i).append("<td data-descripcion-"+i+"></td>");
+				$("#template__content-"+i).append("<td data-marca-"+i+"></td>");
+				$("#template__content-"+i).append("<td data-codigo-"+i+"></td>");
+				$("#template__content-"+i).append("<td data-cantidad-"+i+"></td>");
+				$("#template__content-"+i).append("<td data-categoria-"+i+"></td>");
+				$("#template__content-"+i).append("<td data-precio-"+i+"></td>");
+				
+				$("[data-descripcion-"+i+"]").html(consulta[i].descripcion);
+				$("[data-marca-"+i+"]").html(consulta[i].marcamodelo);
+				$("[data-codigo-"+i+"]").html(consulta[i].codigoinventario);
+				$("[data-cantidad-"+i+"]").html(consulta[i].cantidad);
+				$("[data-categoria-"+i+"]").html(consulta[i].categoria);
+				$("[data-precio-"+i+"]").html(consulta[i].precio);
+				
+			}
 			$("#idmensaje").hide();
 		} else {
-			$("[data-descripcion]").html("");
-			$("[data-marca]").html("");
-			$("[data-codigo]").html("");
-			$("[data-cantidad]").html("");
-			$("[data-categoria]").html("");
-			$("[data-precio]").html("");
+			$(".fila").remove();
+
 			$("#idmensaje").show()
 		}
 

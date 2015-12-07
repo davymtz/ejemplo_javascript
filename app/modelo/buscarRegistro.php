@@ -10,20 +10,14 @@
 		return;
 	}
 	$db_sef->set_charset("utf-8");
-	$query = $db_sef->query("SELECT * FROM articulo where codigoinventario='$contenido'");
+	$query = $db_sef->query("SELECT * FROM articulo where categoria='$contenido'");
 
 	while ($row = $query->fetch_array()) {
-		$getidarticulo = $row["idarticulo"];
-		$getdescripcion = $row["descripcion"];
-		$getmarca = $row["marcamodelo"];
-		$getcodigo= $row["codigoinventario"];
-		$getcantidad = $row["cantidad"];
-		$getcategoria = $row["categoria"];
-		$getprecio = $row["precio"];
-
-		$datos = array("idarticulo"=>$getidarticulo,"descripcion"=>$getdescripcion,"marcamodelo"=>$getmarca,"codigoinventario"=>$getcodigo,
-			"cantidad"=>$getcantidad,"categoria"=>$getcategoria,"precio"=>$getprecio);
+		$datos[] = array("idarticulo"=>$row["idarticulo"],"descripcion"=>$row["descripcion"],
+			"marcamodelo"=>$row["marcamodelo"],"codigoinventario"=>$row["codigoinventario"],
+			"cantidad"=>$row["cantidad"],"categoria"=>$row["categoria"],"precio"=>$row["precio"]);
 	}
+	//var_dump($datos);
 
 	$db_sef->close();
 

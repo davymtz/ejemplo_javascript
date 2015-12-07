@@ -20,7 +20,7 @@ create table articulo(
 insert into articulo values
 	(default,"CENTRIFUGA 24 ELEMENTOS","CRM GIOBE","labproc01",1,"proceso","23000.00"),
 	(default,"CENTRIFUGA 6 ELEMENTOS","MET PATH","labproc02",1,"proceso","2500.00"),
-	/*(default,"PROCESADOR DE BIOMETRIAS","MINDRAY BC5380","labproc03",1,"proceso","550000.00"),*/
+	#(default,"PROCESADOR DE BIOMETRIAS","MINDRAY BC5380","labproc03",1,"proceso","550000.00"),
 	(default,"PROCESADOR DE QUIMICAS SANGUINEAS","MINDRAY BS200","labproc04",1,"proceso","550000.00"),
 	(default,"EQUIPO DE ELECTROLITOS SERICOS","EASY LYTE PLUS","labproc05",1,"proceso","55000.00"),
 	(default,"AGITADOR","BLOOD MIXING","labproc06",1,"proceso","3500.00"),
