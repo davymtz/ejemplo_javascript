@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lista de precios</title>
+	<link rel="stylesheet" href="app/vista/css/bootstrap.min.css">
+	<style>
+	.table-responsive{
+		padding-top: 2em;
+	}
+	.panel-heading{
+		text-align: center;
+		font-size: 2.5em;
+	}
+	tbody tr:nth-child(2n+0){
+		background: #8080ff;
+	}
+	tbody tr:nth-child(2n+1){
+		background: rgba(80,105,150,0.3);
+	}
+	</style>
+</head>
+<body>
+	<input type="text" class="input-prueba" autofocus />
+	Coincidencias:<span class="txtHint"></span>
+	<div class="container-fluid table-responsive">
+		<div class="panel panel-default">
+			<div class="panel-heading">Lista de precios</div>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Pruebas de laboratorio</th>
+						<th>KGC</th>
+						<th>ADN LAB</th>
+						<th>LASSER</th>
+						<th>Precio al público</th>
+					</tr>
+				</thead>
+				<tbody class="body-table">
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script src="app/vista/js/jquery.js"></script>
+	<script src="lista.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-<?php
+<!--?php
 	require "app/controlador/controller.php";
 
 	$mvc = new controller();
@@ -11,4 +11,8 @@
 	} else if ($_GET["action"]=="consultar") {
 		$mvc->principal();
 	}
-?>
+?-->
+
+<?php 
+	include("prueba.html");
+ ?>

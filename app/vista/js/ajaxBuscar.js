@@ -40,6 +40,7 @@
 	}
 
 	function renderTemplate(consulta){
+		console.log(consulta);
 		if (consulta.length>0){
 			for(i=0;i<consulta.length;i++){
 				$("tbody").append("<tr class=\"fila\" id=\"template__content-"+i+"\"></tr>");

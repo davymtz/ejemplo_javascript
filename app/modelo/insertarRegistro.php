@@ -16,7 +16,7 @@
 	$precio = "12.5";
 	*/
 
-	$labmetro = new mysqli("127.0.0.1","root","qaz","inventariolab");
+	$labmetro = new mysqli("hostname","user_bd","password","bd_name");
 	if ($labmetro->connect_errno) {
 		echo "Falló conexión con servidor MySQL, llamar a su proveedor de base de datos ".
 		$labmetro->connec_error;
